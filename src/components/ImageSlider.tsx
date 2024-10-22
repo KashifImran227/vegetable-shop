@@ -56,20 +56,17 @@ const ImageSlider: React.FC = () => {
         autoplay={{ delay: 3000, disableOnInteraction: false }}
       >
         {images.map((image, index) => (
-          <SwiperSlide
-            key={index}
-            className="relative flex items-center justify-center"
-          >
+          <SwiperSlide key={index} className="relative flex items-center justify-center">
             <img
               src={image.src}
               alt={image.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-              <div className="text-white text-xl md:text-3xl font-bold bg-black bg-opacity-70 p-4 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+              <div className="text-white text-xl md:text-3xl font-bold bg-black bg-opacity-70 p-4 rounded-lg shadow-lg mb-2 transition duration-300 transform hover:scale-105">
                 {image.title}
               </div>
-              <div className="text-white text-sm md:text-lg bg-black bg-opacity-70 p-2 rounded-lg shadow-lg mt-2 transition duration-300 transform hover:scale-105">
+              <div className="text-white text-sm md:text-lg bg-black bg-opacity-70 p-2 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
                 {image.description}
               </div>
             </div>
@@ -78,8 +75,7 @@ const ImageSlider: React.FC = () => {
       </Swiper>
       <div className="overflow-hidden whitespace-nowrap bg-[#00000067] py-2">
         <div className="animate-marquee whitespace-nowrap">
-          Hello, this is a vegetable shop! You find all fresh fruits and
-          vegetables here. Contact +92-300-1234567.
+          Hello, this is a vegetable shop! You find all fresh fruits and vegetables here. Contact +92-300-1234567.
         </div>
       </div>
     </div>
