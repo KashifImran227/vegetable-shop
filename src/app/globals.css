@@ -50,14 +50,4 @@ body {
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Adjust this path based on your file structure
-    "./public/index.html",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+
