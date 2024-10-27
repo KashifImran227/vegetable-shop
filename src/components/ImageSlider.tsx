@@ -73,7 +73,7 @@ const ImageSlider: React.FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="overflow-hidden whitespace-nowrap bg-[#00000067] py-2">
+      <div className="overflow-hidden whitespace-nowrap bg-[#4ADE80] py-2">
         <div className="animate-marquee whitespace-nowrap">
           Hello, this is a vegetable shop! You find all fresh fruits and vegetables here. Contact +92-300-1234567.
         </div>
