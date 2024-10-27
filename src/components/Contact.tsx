@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
@@ -38,6 +39,40 @@ const Contact: React.FC = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
+=======
+'use client'
+import React, { useState } from "react";
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (e) => {
+    const { id, value } = e.target; 
+    setFormData({ ...formData, [id]: value });
+    setError("");
+    setSuccess("");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("All fields are required!");
+      return;
+    }
+
+   
+    setSuccess("Your message has been sent successfully!");
+    setFormData({ name: "", email: "", message: "" }); 
+  };
+
+>>>>>>> 9200265c3ea73b1813ccb53a9b96e4da413904fa
   return (
     <div className="p-6 bg-gradient-to-b from-[#08090A] via-[#022027] to-[#060606] text-white">
       <h1 className="text-6xl text-center mb-8 mt-12 text-green-400">
