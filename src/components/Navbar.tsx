@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#0000000] backdrop-blur-lg p-2 z-50 shadow-md text-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-[#00000000] backdrop-blur-lg p-2 z-50 shadow-md text-lg">
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-white text-xl font-bold">
           <Link href="/">
