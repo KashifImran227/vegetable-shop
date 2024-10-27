@@ -45,11 +45,11 @@ const images = [
 
 const ImageSlider: React.FC = () => {
   return (
-    <div>
+    <div className="relative">
       <Swiper
         className="h-screen w-full"
         modules={[Autoplay, Navigation]}
-        spaceBetween={50}
+        spaceBetween={30}
         slidesPerView={1}
         pagination={{ clickable: true }}
         navigation
@@ -65,16 +65,18 @@ const ImageSlider: React.FC = () => {
               alt={image.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-1/3 left-1/2 transform -translate-x-1/2 text-white text-2xl md:text-4xl font-bold bg-black bg-opacity-70 p-4 rounded text-center">
-              {image.title}
-            </div>
-            <div className="absolute bottom-1/4 left-1/2 transform -translate-x-1/2 text-white text-base md:text-lg bg-black bg-opacity-70 p-2 rounded text-center">
-              {image.description}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+              <div className="text-white text-xl md:text-3xl font-bold bg-black bg-opacity-70 p-4 rounded-lg shadow-lg mb-2 transition duration-300 transform hover:scale-105">
+                {image.title}
+              </div>
+              <div className="text-white text-sm md:text-lg bg-black bg-opacity-70 p-2 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                {image.description}
+              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="overflow-hidden whitespace-nowrap bg-[#00000067]">
+      <div className="overflow-hidden whitespace-nowrap bg-[#00000067] py-2">
         <div className="animate-marquee whitespace-nowrap">
           Hello, this is a vegetable shop! You find all fresh fruits and
           vegetables here. Contact +92-300-1234567.
